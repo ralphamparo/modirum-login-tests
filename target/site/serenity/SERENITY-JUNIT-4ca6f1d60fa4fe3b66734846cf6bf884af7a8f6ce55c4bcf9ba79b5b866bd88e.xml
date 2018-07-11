@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Login page" skipped="0" tests="15" time="116.36" timestamp="2018-07-11 10:49:17"><testcase name="Successful login with different usernames and password combinations"/><testcase name="Unsuccessful login with different username and password combinations"/><testcase name="Login with different username and password combinations"><failure message="Expected enabled element was not enabled&#10;Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'&#10;System info: host: 'RALPHXMAIR', ip: '192.168.254.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_172'&#10;Driver info: driver.version: unknown" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'RALPHXMAIR', ip: '192.168.254.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_172'
+Driver info: driver.version: unknown</failure><system-err>Expected enabled element was not enabled
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'RALPHXMAIR', ip: '192.168.254.104', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_172'
+Driver info: driver.version: unknown&#13;
+modirum.seleniumtest.pages.HomePage.should_see_home_page(HomePage.java:50)&#13;
+modirum.seleniumtest.features.steps.serenity.LoginSteps.should_see_home_page(LoginSteps.java:34)&#13;
+modirum.seleniumtest.glue.LoginLogoutStepDefs.i_should__see_the_home_page(LoginLogoutStepDefs.java:39)&#13;
+✽.I should see the home page(src/test/resources/features/login_logout/login_logout.feature:72)&#13;
+</system-err></testcase></testsuite>

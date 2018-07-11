@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="modirum.seleniumtest.features.LoginLogoutAcceptanceTests" time="5.685" tests="13" errors="0" skipped="13" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="cucumber.options" value="--tags @loginUXCases"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_172\jre\bin"/>
+    <property name="java.vm.version" value="25.172-b11"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\ramparo\eclipse-workspace\seleniumteest"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\ramparo\eclipse-workspace\seleniumteest"/>
+    <property name="java.runtime.version" value="1.8.0_172-b11"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_172\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\ramparo\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Users\ramparo\Downloads\apache-maven-3.5.4\bin\..\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_172\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Symantec\VIP Access Client\;C:\WINDOWS\System32\OpenSSH\;C:\Users\ramparo\Downloads\apache-maven-3.5.4\bin;C:\Users\ramparo\AppData\Local\Microsoft\WindowsApps;C:\Users\ramparo\AppData\Local\GitHubDesktop\bin;."/>
+    <property name="maven.conf" value="C:\Users\ramparo\Downloads\apache-maven-3.5.4\bin\../conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="library.jansi.path" value="C:\Users\ramparo\Downloads\apache-maven-3.5.4\bin\..\lib\jansi-native"/>
+    <property name="user.home" value="C:\Users\ramparo"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="ramparo"/>
+    <property name="java.class.path" value="C:\Users\ramparo\Downloads\apache-maven-3.5.4\bin\..\boot\plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_172\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean verify -Dcucumber.options=--tags @loginUXCases"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_172"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_172\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_172\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_172\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_172\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_172\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_172\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_172\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_172\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_172\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp437"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Users\ramparo\Downloads\apache-maven-3.5.4\bin\.."/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp437"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
+    <skipped message="The step &quot;I have opened the URL&quot; is undefined"/>
+    <system-out><![CDATA[@loginFeature
+Feature: Login page
+  In order to be hired at your comapny
+  As an Automation Engineer
+  I want to be able to login and logout in a page I designed and developed using Java
+
+  @loginFeature @loginUXCases
+  Scenario: Login with different username and password combinations &amp#27;[90m# src/test/resources/features/login_logout/login_logout.feature:47&amp#27;[0m
+    &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mI have opened the URL&amp#27;[0m                                     &amp#27;[90m# null&amp#27;[0m
+    &amp#27;[33mWhen &amp#27;[0m&amp#27;[33mI enter the username 'rosamair' and password 'chua'&amp#27;[0m        &amp#27;[90m# null&amp#27;[0m
+    &amp#27;[33mThen &amp#27;[0m&amp#27;[33mI should be able to login and logout&amp#27;[0m                       &amp#27;[90m# null&amp#27;[0m
+    &amp#27;[33mWhen &amp#27;[0m&amp#27;[33mI enter the username 'raprap' and password 'aaa'&amp#27;[0m           &amp#27;[90m# null&amp#27;[0m
+    &amp#27;[33mThen &amp#27;[0m&amp#27;[33mI should not see the home page&amp#27;[0m                             &amp#27;[90m# null&amp#27;[0m
+    &amp#27;[33mWhen &amp#27;[0m&amp#27;[33mI enter the username 'raprap' and password 'amparo'&amp#27;[0m        &amp#27;[90m# null&amp#27;[0m
+    &amp#27;[33mThen &amp#27;[0m&amp#27;[33mI should be able to login and logout&amp#27;[0m                       &amp#27;[90m# null&amp#27;[0m
+    &amp#27;[33mWhen &amp#27;[0m&amp#27;[33mI enter the username 'raprapa' and password 'amparo'&amp#27;[0m       &amp#27;[90m# null&amp#27;[0m
+    &amp#27;[33mThen &amp#27;[0m&amp#27;[33mI should not see the home page&amp#27;[0m                             &amp#27;[90m# null&amp#27;[0m
+    &amp#27;[33mWhen &amp#27;[0m&amp#27;[33mI enter the username ' raprap' and password 'amparo'&amp#27;[0m       &amp#27;[90m# null&amp#27;[0m
+    &amp#27;[33mThen &amp#27;[0m&amp#27;[33mI should not see the home page&amp#27;[0m                             &amp#27;[90m# null&amp#27;[0m
+    &amp#27;[33mWhen &amp#27;[0m&amp#27;[33mI enter the username 'raprap' and password 'amparo '&amp#27;[0m       &amp#27;[90m# null&amp#27;[0m
+    &amp#27;[33mThen &amp#27;[0m&amp#27;[33mI should not see the home page&amp#27;[0m                             &amp#27;[90m# null&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - &amp#27;[36m
+
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+ News and tutorials at http://www.serenity-bdd.info                                  
+ Documentation at https://wakaleo.gitbooks.io/the-serenity-book/content/             
+ Join the Serenity Community on Rocket Chat at https://serenity-bdd.rocket.chat      
+ Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
+ Learn Serenity BDD online at http://serenity-dojo.com                               
+-------------------------------------------------------------------------------------
+&amp#27;[0m
+[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - Test Suite Started: Login page
+[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+                                                                  
+
+TEST STARTED: Login with different username and password combinations
+-------------------------------------------------------------------(login-page;login-with-different-username-and-password-combinations)
+[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
+[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
+[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
+[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
+[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
+[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
+[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
+[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
+[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
+[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
+[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
+[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
+[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
+[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
+          __  _____ _____ ____ _____   ____  _____ _   _ ____ ___ _   _  ____ 
+ _       / / |_   _| ____/ ___|_   _| |  _ \| ____| \ | |  _ \_ _| \ | |/ ___|
+(_)____ / /    | | |  _| \___ \ | |   | |_) |  _| |  \| | | | | ||  \| | |  _ 
+ |_____/ /     | | | |___ ___) || |   |  __/| |___| |\  | |_| | || |\  | |_| |
+(_)   /_/      |_| |_____|____/ |_|   |_|   |_____|_| \_|____/___|_| \_|\____|
+                                                                                
+
+TEST PENDING: Login with different username and password combinations
+---------------------------------------------------------------------------------
+]]></system-err>
+  </testcase>
+  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
+    <skipped message="The step &quot;I enter the username &apos;rosamair&apos; and password &apos;chua&apos;&quot; is undefined"/>
+  </testcase>
+  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
+    <skipped message="The step &quot;I should be able to login and logout&quot; is undefined"/>
+  </testcase>
+  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
+    <skipped message="The step &quot;I enter the username &apos;raprap&apos; and password &apos;aaa&apos;&quot; is undefined"/>
+  </testcase>
+  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
+    <skipped message="The step &quot;I should not see the home page&quot; is undefined"/>
+  </testcase>
+  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
+    <skipped message="The step &quot;I enter the username &apos;raprap&apos; and password &apos;amparo&apos;&quot; is undefined"/>
+  </testcase>
+  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
+    <skipped message="The step &quot;I should be able to login and logout&quot; is undefined"/>
+  </testcase>
+  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
+    <skipped message="The step &quot;I enter the username &apos;raprapa&apos; and password &apos;amparo&apos;&quot; is undefined"/>
+  </testcase>
+  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
+    <skipped message="The step &quot;I should not see the home page&quot; is undefined"/>
+  </testcase>
+  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
+    <skipped message="The step &quot;I enter the username &apos; raprap&apos; and password &apos;amparo&apos;&quot; is undefined"/>
+  </testcase>
+  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
+    <skipped message="The step &quot;I should not see the home page&quot; is undefined"/>
+  </testcase>
+  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
+    <skipped message="The step &quot;I enter the username &apos;raprap&apos; and password &apos;amparo &apos;&quot; is undefined"/>
+  </testcase>
+  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
+    <skipped message="The step &quot;I should not see the home page&quot; is undefined"/>
+  </testcase>
+</testsuite>

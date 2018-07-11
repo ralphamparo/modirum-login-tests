@@ -1,0 +1,5 @@
+modirum\seleniumtest\features\steps\serenity\LoginSteps.class
+modirum\seleniumtest\pages\HomePage.class
+modirum\seleniumtest\features\steps\serenity\LogoutSteps.class
+modirum\seleniumtest\features\LoginLogoutAcceptanceTests.class
+modirum\seleniumtest\glue\LoginLogoutStepDefs.class
