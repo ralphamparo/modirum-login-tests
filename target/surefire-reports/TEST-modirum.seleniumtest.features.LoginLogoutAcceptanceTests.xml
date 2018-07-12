@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="modirum.seleniumtest.features.LoginLogoutAcceptanceTests" time="5.685" tests="13" errors="0" skipped="13" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="modirum.seleniumtest.features.LoginLogoutAcceptanceTests" time="37.537" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="cucumber.options" value="--tags @loginUXCases"/>
+    <property name="cucumber.options" value="--tags @sessionValidationTestCases,@positiveCases"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_172\jre\bin"/>
     <property name="java.vm.version" value="25.172-b11"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
@@ -46,7 +46,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_172\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean verify -Dcucumber.options=--tags @loginUXCases"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Dcucumber.options=--tags @sessionValidationTestCases,@positiveCases"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -65,117 +65,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
-    <skipped message="The step &quot;I have opened the URL&quot; is undefined"/>
-    <system-out><![CDATA[@loginFeature
-Feature: Login page
-  In order to be hired at your comapny
-  As an Automation Engineer
-  I want to be able to login and logout in a page I designed and developed using Java
-
-  @loginFeature @loginUXCases
-  Scenario: Login with different username and password combinations &amp#27;[90m# src/test/resources/features/login_logout/login_logout.feature:47&amp#27;[0m
-    &amp#27;[33mGiven &amp#27;[0m&amp#27;[33mI have opened the URL&amp#27;[0m                                     &amp#27;[90m# null&amp#27;[0m
-    &amp#27;[33mWhen &amp#27;[0m&amp#27;[33mI enter the username 'rosamair' and password 'chua'&amp#27;[0m        &amp#27;[90m# null&amp#27;[0m
-    &amp#27;[33mThen &amp#27;[0m&amp#27;[33mI should be able to login and logout&amp#27;[0m                       &amp#27;[90m# null&amp#27;[0m
-    &amp#27;[33mWhen &amp#27;[0m&amp#27;[33mI enter the username 'raprap' and password 'aaa'&amp#27;[0m           &amp#27;[90m# null&amp#27;[0m
-    &amp#27;[33mThen &amp#27;[0m&amp#27;[33mI should not see the home page&amp#27;[0m                             &amp#27;[90m# null&amp#27;[0m
-    &amp#27;[33mWhen &amp#27;[0m&amp#27;[33mI enter the username 'raprap' and password 'amparo'&amp#27;[0m        &amp#27;[90m# null&amp#27;[0m
-    &amp#27;[33mThen &amp#27;[0m&amp#27;[33mI should be able to login and logout&amp#27;[0m                       &amp#27;[90m# null&amp#27;[0m
-    &amp#27;[33mWhen &amp#27;[0m&amp#27;[33mI enter the username 'raprapa' and password 'amparo'&amp#27;[0m       &amp#27;[90m# null&amp#27;[0m
-    &amp#27;[33mThen &amp#27;[0m&amp#27;[33mI should not see the home page&amp#27;[0m                             &amp#27;[90m# null&amp#27;[0m
-    &amp#27;[33mWhen &amp#27;[0m&amp#27;[33mI enter the username ' raprap' and password 'amparo'&amp#27;[0m       &amp#27;[90m# null&amp#27;[0m
-    &amp#27;[33mThen &amp#27;[0m&amp#27;[33mI should not see the home page&amp#27;[0m                             &amp#27;[90m# null&amp#27;[0m
-    &amp#27;[33mWhen &amp#27;[0m&amp#27;[33mI enter the username 'raprap' and password 'amparo '&amp#27;[0m       &amp#27;[90m# null&amp#27;[0m
-    &amp#27;[33mThen &amp#27;[0m&amp#27;[33mI should not see the home page&amp#27;[0m                             &amp#27;[90m# null&amp#27;[0m
-]]></system-out>
-    <system-err><![CDATA[[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - &amp#27;[36m
-
--------------------------------------------------------------------------------------
-     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
-    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
-   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
-    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
-.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
-|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
-                                                                                     
- News and tutorials at http://www.serenity-bdd.info                                  
- Documentation at https://wakaleo.gitbooks.io/the-serenity-book/content/             
- Join the Serenity Community on Rocket Chat at https://serenity-bdd.rocket.chat      
- Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
- Learn Serenity BDD online at http://serenity-dojo.com                               
--------------------------------------------------------------------------------------
-&amp#27;[0m
-[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - Test Suite Started: Login page
-[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
- _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
-|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
-  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
-  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
-  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
-                                                                  
-
-TEST STARTED: Login with different username and password combinations
--------------------------------------------------------------------(login-page;login-with-different-username-and-password-combinations)
-[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
-[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
-[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
-[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
-[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
-[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
-[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
-[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
-[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
-[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
-[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
-[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
-[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - TEST PENDING
-[main] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
-          __  _____ _____ ____ _____   ____  _____ _   _ ____ ___ _   _  ____ 
- _       / / |_   _| ____/ ___|_   _| |  _ \| ____| \ | |  _ \_ _| \ | |/ ___|
-(_)____ / /    | | |  _| \___ \ | |   | |_) |  _| |  \| | | | | ||  \| | |  _ 
- |_____/ /     | | | |___ ___) || |   |  __/| |___| |\  | |_| | || |\  | |_| |
-(_)   /_/      |_| |_____|____/ |_|   |_|   |_____|_| \_|____/___|_| \_|\____|
-                                                                                
-
-TEST PENDING: Login with different username and password combinations
----------------------------------------------------------------------------------
-]]></system-err>
-  </testcase>
-  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
-    <skipped message="The step &quot;I enter the username &apos;rosamair&apos; and password &apos;chua&apos;&quot; is undefined"/>
-  </testcase>
-  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
-    <skipped message="The step &quot;I should be able to login and logout&quot; is undefined"/>
-  </testcase>
-  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
-    <skipped message="The step &quot;I enter the username &apos;raprap&apos; and password &apos;aaa&apos;&quot; is undefined"/>
-  </testcase>
-  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
-    <skipped message="The step &quot;I should not see the home page&quot; is undefined"/>
-  </testcase>
-  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
-    <skipped message="The step &quot;I enter the username &apos;raprap&apos; and password &apos;amparo&apos;&quot; is undefined"/>
-  </testcase>
-  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
-    <skipped message="The step &quot;I should be able to login and logout&quot; is undefined"/>
-  </testcase>
-  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
-    <skipped message="The step &quot;I enter the username &apos;raprapa&apos; and password &apos;amparo&apos;&quot; is undefined"/>
-  </testcase>
-  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
-    <skipped message="The step &quot;I should not see the home page&quot; is undefined"/>
-  </testcase>
-  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
-    <skipped message="The step &quot;I enter the username &apos; raprap&apos; and password &apos;amparo&apos;&quot; is undefined"/>
-  </testcase>
-  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
-    <skipped message="The step &quot;I should not see the home page&quot; is undefined"/>
-  </testcase>
-  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
-    <skipped message="The step &quot;I enter the username &apos;raprap&apos; and password &apos;amparo &apos;&quot; is undefined"/>
-  </testcase>
-  <testcase name="Login with different username and password combinations" classname="Login page" time="0">
-    <skipped message="The step &quot;I should not see the home page&quot; is undefined"/>
-  </testcase>
+  <testcase name="Successful login with different usernames and password combinations" classname="Login page" time="8.717"/>
+  <testcase name="Successful login with different usernames and password combinations" classname="Login page" time="6.096"/>
+  <testcase name="Successful login with different usernames and password combinations" classname="Login page" time="6.116"/>
+  <testcase name="Login with different username and password combinations" classname="Login page" time="14.662"/>
 </testsuite>

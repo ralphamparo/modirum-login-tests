@@ -53,9 +53,7 @@ public class HomePage extends PageObject {              // <2>
 
 	public void should_not_see_home_page() {
 		//assertion1  -> fail
-		errorLabel.waitUntilVisible();
-		errorLabel.shouldBeCurrentlyVisible();
-			
+		logoutLink.shouldNotBeVisible();	
 	}
 	
 	public void clickLogoutButton() 

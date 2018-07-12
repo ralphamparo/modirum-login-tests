@@ -18,6 +18,11 @@ public class LoginLogoutStepDefs {
 			 // Write code here that turns the phrase above into concrete actions
 			login.opens_home_page("http://localhost:8081/examples/jsp/loginlogout/home.jsp");
 		}
+		@When("I have opened an invalid URL '(.*?)'$")
+		public void i_enter_username_and_password(String url) {
+			// Write code here that turns the phrase above into concrete actions
+			login.opens_home_page(url);
+		}
 
 		@When("^I enter the username \"([^\"]*)\" and password \"([^\"]*)\"$")
 		public void i_enter_the_correct_username_and_password(String username, String password) {
