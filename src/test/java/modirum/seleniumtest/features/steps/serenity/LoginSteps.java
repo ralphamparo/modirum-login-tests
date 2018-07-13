@@ -29,15 +29,15 @@ public class LoginSteps {
    	}
 
     @Step
-	public void should_see_home_page() {
+	public void should_see_home_page(String username) {
 		// TODO Auto-generated method stub
-    	homePage.should_see_home_page();
+    	homePage.should_see_home_page(username);
 	}
     
     @Step
-	public void should_not_see_home_page() {
+	public void should_not_see_home_page(String username) {
 		// TODO Auto-generated method stub
-    	homePage.should_not_see_home_page();
+    	homePage.should_not_see_home_page(username);
 	}
 
 // tag::tail[]
