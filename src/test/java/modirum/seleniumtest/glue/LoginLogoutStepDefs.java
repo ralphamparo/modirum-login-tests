@@ -71,5 +71,11 @@ public class LoginLogoutStepDefs {
 			// Write code here that turns the phrase above into concrete actions
 			navigate.open_new_window(windowURL);
 		}
+		
+		@Then("^I should see login error message \"([^\"]*)\"$")
+		public void i_should__see_error_message(String errorMessage) {
+			// Write code here that turns the phrase above into concrete actions
+			 login.should_see_error_message(errorMessage);
+		}
 
 }

@@ -12,7 +12,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import junit.framework.Assert;
 
 // tag::header[]
@@ -83,6 +82,12 @@ public class HomePage extends PageObject {              // <2>
 	
 	}
 	
+	@SuppressWarnings("deprecation")
+	public void should_see_error_message(String errorMEssage) {	
+		
+		errorLabel.shouldBeVisible();
+	}
+
 	public void clickLogoutButton() 
 	{
 		 logoutLink.click();

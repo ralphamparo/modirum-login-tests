@@ -40,6 +40,11 @@ public class LoginSteps {
     	homePage.should_not_see_home_page(username);
 	}
 
+	public void should_see_error_message(String errorMessage) {
+		// TODO Auto-generated method stub
+		homePage.should_see_error_message(errorMessage);
+	}
+
 // tag::tail[]
 }
 //end:tail
