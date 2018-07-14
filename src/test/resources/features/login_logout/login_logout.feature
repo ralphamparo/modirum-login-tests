@@ -18,10 +18,10 @@ Feature: Login and Logout functionality
     Then I should not see the home page for user "<username>"
    
   Examples:
-   | username   | password  |
-   | rosamair   | chua      |
-   | rosesophia | loren     |
-   | raprap     | amparo    |
+   |username|password|
+   |rosamair|chua|
+   |rosesophia|loren|
+   |raprap|amparo|
 # end::positivescenarios[]
 
 @negativeCases
@@ -44,7 +44,6 @@ Feature: Login and Logout functionality
    |    |  amparo         |
 
 @sqlInjectionCases
-# tag::@sqlInjectionScenarios[]
   Scenario Outline: Inject malicious SQL in the login form
     Given I have opened the URL 'http://localhost:8081/examples/jsp/loginlogout/home.jsp'
     When I enter the username "<username>" and password "<password>"
@@ -96,7 +95,7 @@ Feature: Login and Logout functionality
     Then I should be able to login and logout user "raprap"
 
 @sessionManagementValidationCases
-  Scenario: Login with different username and password combinations
+  Scenario: Session Management Verification
     Given I have opened the URL 'http://localhost:8081/examples/jsp/loginlogout/home.jsp'
     When I enter the username 'rosesophia' and password 'loren'
     Then I should see the home page for user "rosesophia"
@@ -117,14 +116,3 @@ Feature: Login and Logout functionality
     Then I should be able to login and logout user "rosesophia"
     When I have opened an invalid URL 'http://localhost:8081/examples/jsp/loginlogout/welcome.jsp'
 	Then I should not see the home page for user "rosesophia"
-    
-@boundToFailCases
-# tag:boundtofailscenarios[]
-  Scenario: Login with incorrect username and password combinations
-    Given I have opened the URL 'http://localhost:8081/examples/jsp/loginlogout/home.jsp'
-    When I enter the username 'rosesophia' and password 'lorena'
-    Then I should see the home page for user "rosesophia"
-    When I have opened the URL 'http://localhost:8081/examples/jsp/loginlogout/home.jsp'
-    And I enter the username 'raprap' and password 'amparo'
-    Then I should see the home page for user "raprap"
-# end::boundtofailscenarios[]

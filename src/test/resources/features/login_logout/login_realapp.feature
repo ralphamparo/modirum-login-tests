@@ -1,23 +1,78 @@
+@realApp
 Feature: Login and Logout
 
-@positiveCases @testWithCorrectUsernamesAndPassword
-   Scenario Outline: Unsuccessful login with different username and password combinations
+@positiveCases
+  Scenario Outline: Successful login with different usernames and password combinations
     Given I have opened the URL 'http://localhost:8081/examples/jsp/loginlogout/home.jsp'
     When I enter the username "<username>" and password "<password>"
-    Then I should see login error message "Invalid username or password. Please try again."
-    When I have opened a new window with URL 'http://localhost:8081/examples/jsp/loginlogout/home.jsp'
-    Then I should not see the home page for user "<username>"
+    Then I should see the home page for user "<username>"
     When I have opened a new window with URL 'http://localhost:8081/examples/jsp/loginlogout/welcome.jsp'
-  	Then I should not see the home page for user "<username>"
-  
+    Then I should see the home page for user "<username>"
+    Then I should be able to logout
+    When I have opened the URL 'http://localhost:8081/examples/jsp/loginlogout/home.jsp'
+    Then I should not see the home page for user "<username>"
+   
   Examples:
    | username   | password  |
    | rosamair   | chua      |
    | rosesophia | loren     |
    | raprap     | amparo    |
 
-#@signUpPage
+@loginFormBoundaryValueAnalysisCases
+Scenario Outline: User logs in with invalid parameters
+    Given I have opened the URL 'http://localhost:8081/examples/jsp/loginlogout/signin.jsp'
+    When I enter the username "<username>" containing characters less than "<usernameCharacterLengthMinLimit>"
+    Then I should see an error message that prompts the user for the invalid "<username>"
+    When I enter the username "<username>" containing characters greater than "<usernameCharacterLengthMaxLimit>"
+    Then "<username>" should be left truncated until the "<usernameCharacterLengthMaxLimit>"
+    When I enter the password "<password>" containing characters less than "<passwordCharacterLengthMinLimit>"
+    Then I should see an error message that prompts the user for the invalid "<password>"
+    When I enter the password "<password>" containing characters greater than "<passwordCharacterLengthMaxLimit>"
+    Then "<password>" should be left truncated until the "<passwordCharacterLengthMaxLimit>"
+    When I click login button
+    Then I should not see the home page for user "<username>"
+	
+	Examples:
+   | username   | password    | usernameCharacterLengthMinLimit | usernameCharacterLengthMaxLimit | passwordCharacterLengthMiLimit|passwordCharacterLengthMaxLimit | 
+   | issimplydummytextoftheprintingandtypesettingindustry.LoremIpsumhasbeentheindustry'sstandarddummytexteversincethe1500s,whenanunknownprintertookagalleyoftypeandscrambledittomakeatypespecimenbook.Ithassurvivednotonlyfivecenturies,butalsotheleapintoelectronict            | newPassword |  8						        | 255						      |           8                   |               255                |
+   | newUser    | issimplydummytextoftheprintingandtypesettingindustry.LoremIpsumhasbeentheindustry'sstandarddummytexteversincethe1500s,whenanunknownprintertookagalleyoftypeandscrambledittomakeatypespecimenbook.Ithassurvivednotonlyfivecenturies,butalsotheleapintoelectronict     |  8			       | 255		                 |  8				 | 255                         |
+   
+@signUpPagePositiveCases
+Scenario Outline: New user signs up with correct parameters
+    Given I have opened the URL 'http://localhost:8081/examples/jsp/loginlogout/signin.jsp'
+    When I enter the username "<username>", password "<password>" and email "<email>"
+	And I have verified the user registeration in "<email>"
+	And I have opened the URL 'http://localhost:8081/examples/jsp/loginlogout/home.jsp'
+	Then I should see the home page for user "<username>"
+    And I should be able to logout
+    When I have opened the URL 'http://localhost:8081/examples/jsp/loginlogout/signin.jsp'
+    When I enter the username "<username>", password "<password>" and email "<email>"
+	Then I should an error prompting "<username>" exists
+    
+	Examples:
+   | username   | password    | email |
+   | newUser    | newPassword | email@email.com |
 
+@signUpPageNegativeCases
+Scenario Outline: New user signs up with invalid parameters
+    Given I have opened the URL 'http://localhost:8081/examples/jsp/loginlogout/signin.jsp'
+    When I enter the username "<username>" containing characters less than "<usernameCharacterLengthMinLimit>"
+    Then I should see an error message that prompts the user for the invalid "<username>"
+    When I enter the username "<username>" containing characters greater than "<usernameCharacterLengthMaxLimit>"
+    Then I should see an error message that prompts the user for the invalid "<username>"
+    When I enter the password "<password>" containing characters less than "<passwordCharacterLengthMinLimit>"
+    Then I should see an error message that prompts the user for the invalid "<password>"
+    When I enter the password "<password>" containing characters greater than "<passwordCharacterLengthMaxLimit>"
+    Then I should see an error message that prompts the user for the invalid "<password>"
+    When I enter the email "<email>" with an invalid format
+    Then I should see an error message that prompts the user for the invalid "<email>"
+   
+	Examples:
+   | username   | password    | email 	  | usernameCharacterLengthMinLimit | usernameCharacterLengthMaxLimit | passwordCharacterLengthMiLimit|passwordCharacterLengthMaxLimit | 
+   | newUser    | issimplydummytextoftheprintingandtypesettingindustry.LoremIpsumhasbeentheindustry'sstandarddummytexteversincethe1500s,whenanunknownprintertookagalleyoftypeandscrambledittomakeatypespecimenbook.Ithassurvivednotonlyfivecenturies,butalsotheleapintoelectronict           |	email.com |  8						        | 255						      | 8                             | 255  |
+   | issimplydummytextoftheprintingandtypesettingindustry.LoremIpsumhasbeentheindustry'sstandarddummytexteversincethe1500s,whenanunknownprintertookagalleyoftypeandscrambledittomakeatypespecimenbook.Ithassurvivednotonlyfivecenturies,butalsotheleapintoelectronict          | newPassword |	email.com |  8						        | 255						      | 8 | 255|
+	
+      
 @negativeCases 
 @testWithIncorrectUsernamesAndPassword 
 @testWithEmptyUserAndCorrectPassword
@@ -189,9 +244,3 @@ Feature: Login and Logout
     Then I should see the home page for user "rosesophia"
     When I have opened the URL 'http://localhost:8081/examples/jsp/loginlogout/home.jsp' in "microsoft edge" browser
     Then I should see the home page for user "rosesophia"
-   
-   
-   
-   
-   
-       
